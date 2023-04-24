@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light azul">
+  <ul class="navbar-nav">
+      <li><img src="https://t3.ftcdn.net/jpg/04/51/58/76/360_F_451587634_iVJKobsbjLpbtBY0HTkZ2tzgUVGHfzEU.jpg" alt="Logo" style="width:40px;"><a class="navbar-brand" href="#"> &nbsp; TV Series</a></li>
+  </ul>
+</nav>
+
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+              <table class="table" id='tabla'>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Channel</th>
+                    <th>Seasons</th>
+                  </tr>
+                </thead>
+                <tbody id = 'series'>
+                  <tr *ngFor="let s of series">
+                    <td> <b>{{s.id}}</b> </td>
+                    <td> <a href={{s.url}}>{{s.name}}</a> </td>
+                    <td> {{s.channel}} </td>
+                    <td> {{s.seasons}} </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>&nbsp; Seasons average: {{average}}</p>
+            </div>
+        </div>
+      </div>
+
